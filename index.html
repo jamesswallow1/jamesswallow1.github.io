@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="James Swallow is a Geography educator based in Bristol in the South West of England. Teaching resources, interests and published articles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="James Swallow | Geography Educator">
+  <meta property="og:description" content="Teaching resources, classroom quizzes and published writing on geography and climate education.">
+  <title>James Swallow — Geography Educator</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #fbfaf7;
+      --ink: #222b2b;
+      --secondary: #69736f;
+      --quiet: #8b928c;
+      --accent: #315c50;
+      --rule: #e5e6e0;
+      --focus: #3f7966;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    ::selection { background: #d6e6dd; color: #172f27; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 2px; }
+    .skip { position: absolute; top: -100px; left: 15px; z-index: 3; background: var(--ink); color: white; padding: 11px 15px; }
+    .skip:focus { top: 15px; }
+    .site {
+      width: min(100% - 56px, 704px);
+      margin: 0 auto;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(42px, 7vh, 74px) 0 22px;
+    }
+    main { flex: 1 0 auto; }
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) 116px;
+      column-gap: 24px;
+      align-items: start;
+    }
+    h1 {
+      margin: -5px 0 4px;
+      font-size: clamp(34px, 5vw, 43px);
+      line-height: 1.15;
+      letter-spacing: -.055em;
+      font-weight: 700;
+    }
+    .role { margin: 0; font-size: 15px; font-weight: 550; letter-spacing: -.012em; color: var(--accent); }
+    .location { margin: 7px 0 0; color: var(--secondary); font-size: 12.5px; line-height: 1.4; letter-spacing: -.008em; }
+    .bio { max-width: 580px; margin: 20px 0 0; font-size: 15.5px; line-height: 1.66; letter-spacing: -.01em; color: #424c49; }
+    .portrait {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #f2f3ec;
+      border: 1px solid #e0e5dd;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .content-section { border-top: 1px solid var(--rule); margin-top: 21px; padding-top: 17px; }
+    .interests-list { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 13px 0 0; padding: 0; }
+    .interests-list li { padding: 7px 10px; background: #f0f3ed; border: 1px solid #dbe3d9; border-radius: 6px; color: #4e6257; font-size: 12px; line-height: 1.25; white-space: nowrap; }
+    .interests-section { padding-top: 16px; }
+    .section-heading {
+      margin: 0 0 7px;
+      font-size: 15px;
+      letter-spacing: -.017em;
+      font-weight: 700;
+    }
+    .link-list { margin: 0; padding: 0; list-style: none; }
+    .link-list li + li { border-top: 1px solid #eeeee9; }
+    .link-list a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 9px 0;
+      text-decoration: none;
+    }
+    .link-list a:hover .link-title { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent); }
+    .link-title { display: block; color: var(--ink); font-size: 15px; font-weight: 550; line-height: 1.45; letter-spacing: -.015em; }
+    .link-detail { display: block; color: var(--secondary); font-size: 12px; line-height: 1.55; margin-top: 3px; }
+    .external-arrow { flex: none; align-self: center; font-size: 16px; line-height: 1; color: var(--accent); margin-right: 3px; transition: transform 150ms ease; }
+    .link-list a:hover .external-arrow { transform: translate(2px,-2px); }
+    .article-list a { padding: 9px 0 10px; }
+    .article-list .link-title { max-width: 610px; }
+    footer {
+      flex: none;
+      border-top: 1px solid var(--rule);
+      margin-top: 21px;
+      padding-top: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--quiet);
+    }
+    .footer-contact { display: flex; align-items: center; gap: 18px; }
+    .footer-contact a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .pending-contact { color: var(--secondary); cursor: help; border-bottom: 1px dotted #a7ada7; }
+    @media (min-width: 850px) and (min-height: 790px) {
+      .site { padding-top: clamp(62px, 8vh, 88px); }
+    }
+    /* Keep the footer visible on standard 1366 × 768 laptop screens. */
+    @media (min-width: 850px) and (max-height: 819px) {
+      .site { padding-top: 33px; padding-bottom: 12px; }
+      .content-section { margin-top: 19px; padding-top: 15px; }
+      footer { margin-top: 19px; padding-top: 12px; }
+    }
+    @media (max-width: 500px) {
+      .site { width: min(100% - 40px, 704px); padding-top: 51px; padding-bottom: 22px; }
+      .intro {
+        grid-template-columns: minmax(0, 1fr) 86px;
+        grid-template-areas: "name photo" "role photo" "location photo" "bio bio";
+        grid-template-rows: auto auto 1fr auto;
+        column-gap: 16px;
+        row-gap: 0;
+      }
+      .intro > div:first-child { display: contents; }
+      h1 { grid-area: name; font-size: clamp(31px, 8vw, 37px); margin: -4px 0 7px; }
+      .role { grid-area: role; font-size: 13px; line-height: 1.4; }
+      .location { grid-area: location; font-size: 11.5px; margin-top: 3px; }
+      .portrait { grid-area: photo; width: 86px; height: 86px; }
+      .bio { grid-area: bio; max-width: none; margin-top: 22px; font-size: 15px; line-height: 1.7; }
+      .content-section { margin-top: 25px; padding-top: 19px; }
+      .link-list a { padding: 12px 0; }
+      .interests-list { gap: 7px; }
+      .interests-list li { font-size: 11.5px; padding: 7px 9px; white-space: normal; }
+      .link-title { font-size: 14px; }
+      footer { margin-top: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .external-arrow { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="site">
+    <main id="main">
+      <header class="intro">
+        <div>
+          <h1>James Swallow</h1>
+          <p class="role">Geography Educator</p>
+          <p class="location">Based in Bristol, South West England</p>
+          <p class="bio">I teach Geography and aim to create engaging, inclusive learning that helps young people understand the world, both inside and beyond the classroom.</p>
+        </div>
+        <div class="portrait">
+          <img src="profile-illustration.png" alt="Illustrated portrait of James Swallow">
+        </div>
+      </header>
+
+      <section class="content-section interests-section" aria-labelledby="interests-heading">
+        <h2 class="section-heading" id="interests-heading">Areas of interest</h2>
+        <ul class="interests-list">
+          <li>Climate change pedagogy</li>
+          <li>Learning outside the classroom</li>
+          <li>Inclusion</li>
+          <li>Wellbeing</li>
+          <li>Digital tools</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="resources-heading">
+        <h2 class="section-heading" id="resources-heading">My resources</h2>
+        <ul class="link-list">
+          <li><a href="https://www.tes.com/member/jamesgeography" target="_blank" rel="noopener noreferrer"><span><span class="link-title">TES Resources</span><span class="link-detail">Geography teaching materials and classroom resources</span></span><span class="external-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://dashboard.blooket.com/user/MrSwallowTeach" target="_blank" rel="noopener noreferrer"><span><span class="link-title">Blooket</span><span class="link-detail">Quizzes, revision and retrieval practice</span></span><span class="external-arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="articles-heading">
+        <h2 class="section-heading" id="articles-heading">Published articles</h2>
+        <ul class="link-list article-list">
+          <li><a href="https://portal.geography.org.uk/journal/view/J9781899086463" target="_blank" rel="noopener noreferrer"><span><span class="link-title">Feeling climate change – classroom craftivism</span><span class="link-detail"><em>Teaching Geography</em> · 2026 · with Nicola Warren-Lee and Michelle Graffagnino</span></span><span class="external-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://routesjournal.org/2024/11/24/james-swallow/" target="_blank" rel="noopener noreferrer"><span><span class="link-title">Urgency not anxiety: effectively educating about climate change to empower action and avoid distress</span><span class="link-detail"><em>Routes</em> · 2024</span></span><span class="external-arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-contact" aria-label="Contact methods">
+        <a href="mailto:james@jamesswallow.uk">Email ↗</a>
+        <a href="https://uk.linkedin.com/in/james-swallow-5274aa1ab" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <span>© <span id="copyright-year">2026</span> James Swallow</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
